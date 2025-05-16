@@ -61,3 +61,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - calculens
+    - hspec >= 2.7
+    - QuickCheck >= 2.14

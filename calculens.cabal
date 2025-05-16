@@ -67,6 +67,10 @@ test-suite calculens-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      ASTSpec
+      EvaluatorSpec
+      IntegrationSpec
+      ParserSpec
       Paths_calculens
   autogen-modules:
       Paths_calculens
@@ -74,9 +78,11 @@ test-suite calculens-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      QuickCheck >=2.14
+    , base >=4.7 && <5
     , calculens
     , containers
+    , hspec >=2.7
     , mtl
     , parsec >=3.1
     , text
