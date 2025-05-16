@@ -1,8 +1,9 @@
-module Main where
+module Main
+  ( main
+  ) where
 
-import CalcuLens
-import System.IO
-import Data.Map (Map)
+import CalcuLens (Environment, parseAndEval)
+import System.IO (hFlush, stdout)
 import qualified Data.Map as Map
 import Control.Monad (unless)
 
