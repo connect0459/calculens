@@ -13,7 +13,7 @@ repl env = do
   putStr "calculens> "
   hFlush stdout
   line <- getLine
-  unless (line == "quit" || line == "exit") $ do
+  unless (line == "q" || line == "quit" || line == "exit") $ do
     case parseAndEval env line of
       Left err -> do
         putStrLn $ "エラー: " ++ err
@@ -24,7 +24,7 @@ repl env = do
 
 main :: IO ()
 main = do
-  putStrLn "CalculensへようこそREPL! 数式を入力してください。終了するには 'quit' または 'exit' と入力してください。"
+  putStrLn "CalculensへようこそREPL! 数式を入力してください。終了するには 'q', 'quit', 'exit' のいずれかを入力してください。"
   -- 初期環境に定数を追加
   let initialEnv = Map.fromList
         [ ("pi", pi)

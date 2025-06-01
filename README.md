@@ -17,7 +17,7 @@
 ### インストール手順
 
 ```sh
-git clone https://github.com/githubuser/calculens.git
+git clone https://github.com/connect0459/calculens.git
 cd calculens
 stack build
 ```
@@ -43,7 +43,7 @@ cabal run calculens-exe
 ```
 
 REPLが起動したら、数式を入力してください。  
-終了するには `quit` または `exit` と入力します。
+終了するには `q` , `quit` , `exit` のいずれかを入力します。
 
 例:
 
@@ -52,7 +52,7 @@ calculens> 1 + 2 * 3
 結果: 7.0
 calculens> pi * 2
 結果: 6.283185307179586
-calculens> quit
+calculens> q
 ```
 
 ## ライセンス
